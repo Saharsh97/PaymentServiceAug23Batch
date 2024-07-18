@@ -29,5 +29,12 @@ public class PaymentController {
                         );
         return url;
     }
+
+    @PostMapping("/webhooks")
+    public String handleWebhook(){
+        System.out.println("request for webhook received");
+        System.out.println("updating db....");
+        return "webhook completed";
+    }
 }
 
